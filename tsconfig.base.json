@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mamafuahub/backend/core": ["libs/backend/core/src/index.ts"],
+      "@mamafuahub/backend/shared": ["libs/backend/shared/src/index.ts"],
+      "@mamafuahub/backend/users": ["libs/backend/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
