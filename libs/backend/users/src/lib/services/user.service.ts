@@ -59,4 +59,21 @@ export class UserService {
       return [];
     }
   }
+  async findOne(email: string): Promise<User> {
+    try {
+      const user = await this.userRepository.findOne({
+        where: {
+          email: email,
+        },
+      });
+      return user;
+    } catch (error) {
+      this.logger.error({
+        title: 'Get All Users',
+        data: error,
+        Query: 'getAll',
+        Location: 'UserService',
+      });
+    }
+  }
 }
