@@ -34,6 +34,7 @@ export class UserService {
         Mutation: 'createUser',
         Location: 'UserService',
       });
+      console.log('mogona', error);
       return {
         message: 'User not created',
         success: false,
