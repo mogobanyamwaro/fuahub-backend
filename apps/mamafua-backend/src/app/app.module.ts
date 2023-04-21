@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
-
+import { ConfigModule } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
 
@@ -11,6 +11,7 @@ import { AppService } from './app.service';
 @Module({
   imports: [
     BackendCoreModule,
+    ConfigModule.forRoot(),
     WinstonModule.forRootAsync({
       useFactory: () => ({
         transports: [

@@ -15,11 +15,11 @@ import { BackendUsersModule } from '@mamafuahub/backend/users';
     TypeOrmModule.forRootAsync({
       useFactory: () => ({
         type: 'postgres',
-        host: 'localhost',
-        port: 5432,
-        username: 'postgres',
-        password: '1234',
-        database: 'mamafua',
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT, 10) || 5432,
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
         entities: getMetadataArgsStorage().tables.map((tbl) => tbl.target),
         synchronize: true,
         logging: process.env.NODE_ENV === 'development',

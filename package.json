@@ -20,7 +20,6 @@
     "format:write": "nx format:write",
     "format:check": "nx format:check",
     "cz": "cz"
-
   },
   "private": true,
   "dependencies": {
@@ -29,6 +28,7 @@
     "@nestjs/apollo": "^11.0.5",
     "@nestjs/class-transformer": "^0.4.0",
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/graphql": "^11.0.5",
     "@nestjs/platform-express": "^9.0.0",
