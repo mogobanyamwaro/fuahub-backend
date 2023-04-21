@@ -1,8 +1,8 @@
-import { Test } from "@nestjs/testing";
+import { Test } from '@nestjs/testing';
 
-import { AppService } from "./app.service";
+import { AppService } from './app.service';
 
-describe("AppService", () => {
+describe('AppService', () => {
   let service: AppService;
 
   beforeAll(async () => {
@@ -13,9 +13,13 @@ describe("AppService", () => {
     service = app.get<AppService>(AppService);
   });
 
-  describe("getData", () => {
-    it('should return "Hello API"', () => {
-      expect(service.getData()).toEqual({ message: "Hello API" });
+  describe('getData', () => {
+    it('should return object', async () => {
+      const result = await service.getAll();
+      expect(result).toMatchObject({
+        message: 'Welcome to MamafuaHub',
+        success: true,
+      });
     });
   });
 });
