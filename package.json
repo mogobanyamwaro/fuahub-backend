@@ -19,8 +19,8 @@
     "format": "nx format:write",
     "format:write": "nx format:write",
     "format:check": "nx format:check",
-    "cz": "cz",
-    "prepare": "husky install"
+    "cz": "cz"
+
   },
   "private": true,
   "dependencies": {

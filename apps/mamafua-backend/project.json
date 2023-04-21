@@ -58,6 +58,10 @@
           "codeCoverage": true
         }
       }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/mamafua-backend/Dockerfile . -t mamafua-backend"
     }
   },
   "tags": []
